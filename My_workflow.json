@@ -1,0 +1,62 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "d8540b93-0403-4379-b9b5-6472e03304c7",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "resource": "spreadsheet",
+        "title": "begin",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        220,
+        0
+      ],
+      "id": "e539ca47-6c41-41d5-b998-c9304bf41cab",
+      "name": "Google Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "JCqzfbZLQQmgnUPr",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "ea9b11a6-ce82-4e9c-97bc-39c0c7651fc5",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "9c9ab4959a11d4c35ac80ae9474eea0ac7e6f36274954254136dff661ca5e00c"
+  },
+  "id": "IsGblGB4A06dbb57",
+  "tags": []
+}
